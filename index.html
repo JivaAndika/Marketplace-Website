@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarketPlace</title>
+    <!-- TAILWINDCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PHOSPHOR ICON -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- FLOWBITE -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="">
+    <!-- HEADER PROMO -->
+    <!-- <div class="promo bg-[#eeeeee]">
+        <div class="container mx-auto py-[6px]">
+          <marquee >
+            <ul class="flex justify-center lg:justify-between items-center">
+              <li class="lg:flex hidden items-center">
+                <div class="email flex items-center gap-2">
+                  <i class="ph ph-envelope-simple text-xl"></i>
+                  <p class="text-sm text-slate-600">Sign up to join FILA</p>
+                </div>
+              </li>
+              <li class="flex">
+                <p class="text-sm text-slate-600">FREE STANDARD SHIPPING</p>
+              </li>
+              <li class="lg:flex hidden items-center">
+                <div class="contact flex gap-2 text-xs text-slate-600">
+                  <a href="">ID</a>
+                  <a href="">Contact Us</a>
+                </div>
+              </li>
+            </ul>
+          </marquee>
+        </div>
+      </div> -->
+    <!-- NAVBAR -->
+    <nav class="w-full shadow-lg fixed bg-white z-50">
+      <div class="container mx-auto justify-between flex p-4 lg:py-6">
+        <div class="nav-logo">
+          <svg
+            width="46"
+            height="46"
+            viewBox="0 0 46 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              clip-path="url(#kk35srubca)"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              fill="#19191A"
+            >
+              <path d="M0 46h46V0H0v46zm2.11-2.12h41.78V2.12H2.11v41.76z" />
+              <path
+                d="M35.239 5.935H10.76c-2.68 0-4.853 2.183-4.853 4.876 0 2.693 2.173 4.876 4.853 4.876H35.24c2.68 0 4.853-2.183 4.853-4.876 0-2.693-2.173-4.876-4.853-4.876zM32.706 18.442H10.761c-2.68 0-4.853 2.183-4.853 4.876v12.93c0 2.693 2.173 4.876 4.853 4.876 2.68 0 4.854-2.183 4.854-4.875v-6.996c0-.585.472-1.06 1.055-1.06h16.036c2.68 0 4.854-2.183 4.854-4.875 0-2.693-2.174-4.876-4.854-4.876z"
+              />
+            </g>
+            <defs>
+              <clipPath id="kk35srubca">
+                <path fill="#fff" d="M0 0h46v46H0z" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div class="categories lg:flex hidden items-center">
+          <ul class="flex gap-6 text-xl font-light">
+            <li><a href="">Men</a></li>
+            <li><a href="">Women</a></li>
+            <li><a href="">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="response-button flex items-center">
+          <ul class="flex gap-3 text-2xl">
+            <li onclick="openSearch()" id="search-button">
+              <i class="ph-light ph-magnifying-glass cursor-pointer"></i>
+            </li>
+            <li>
+              <a href=""><i class="ph-light ph-user"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="ph-light ph-shopping-cart-simple"></i> </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="search-input w-full bg-white border-b -translate-y-full opacity-0 transition-all ease-in-out duration-250 fixed z-50"
+    >
+      <div
+        class="container search-bar mx-auto flex justify-center items-center py-3 gap-3"
+      >
+        <input
+          type="search"
+          class="lg:w-full w-3/4 font-bold border rounded-sm p-3"
+          placeholder="Search"
+        />
+        <i
+          class="ph-bold ph-x close-search text-2xl cursor-pointer"
+          onclick="closeSearch()"
+        ></i>
+      </div>
+    </div>
+    <section class="hero pt-16 lg:pt-20">
+      <div
+        id="controls-carousel"
+        class="relative w-full"
+        data-carousel="static"  
+      > 
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden md:h-96 lg:h-[700px]">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="img/hero-1.jpg"
+              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 2 -->
+          <div
+            class="hidden duration-700 ease-in-out"
+            data-carousel-item="active"
+          >
+            <img
+              src="img/hero-2.jpg"
+              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="img/hero-3.jpg"
+              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+        </div>
+        <!-- Slider controls -->
+        <button
+          type="button"
+          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+        >
+          <span
+            class="inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#fafafa] hover:bg-[#f5f3f3]"
+          >
+            <svg
+              class="w-3 h-3 text-white dark:text-gray-800 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+        >
+          <span
+            class="inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#fafafa] hover:bg-[#f5f3f3]"
+          >
+            <svg
+              class="w-3 h-3 text-white dark:text-gray-800 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+    </section>
+    <div class="pb-[10000px]"></div>
+    <!-- JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
