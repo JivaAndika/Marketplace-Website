@@ -19,3 +19,5 @@ function closeSearch() {
   searchBar.classList.remove("opacity-100");
   searchBar.classList.remove("translate-y-full");
 }
+
+// SLIDER IMAGE
