@@ -15,39 +15,16 @@
     />
   </head>
   <style>
-    .offer-slider {
+    .slider {
       scrollbar-width: none;
     }
   </style>
   <body class="">
-    <!-- HEADER PROMO -->
-    <!-- <div class="promo bg-[#eeeeee]">
-        <div class="container mx-auto py-[6px]">
-          <marquee >
-            <ul class="flex justify-center lg:justify-between items-center">
-              <li class="lg:flex hidden items-center">
-                <div class="email flex items-center gap-2">
-                  <i class="ph ph-envelope-simple text-xl"></i>
-                  <p class="text-sm text-slate-600">Sign up to join FILA</p>
-                </div>
-              </li>
-              <li class="flex">
-                <p class="text-sm text-slate-600">FREE STANDARD SHIPPING</p>
-              </li>
-              <li class="lg:flex hidden items-center">
-                <div class="contact flex gap-2 text-xs text-slate-600">
-                  <a href="">ID</a>
-                  <a href="">Contact Us</a>
-                </div>
-              </li>
-            </ul>
-          </marquee>
-        </div>
-      </div> -->
     <!-- NAVBAR -->
     <nav class="w-full shadow-lg fixed bg-white z-50">
       <div class="container mx-auto justify-between flex p-4 lg:py-6">
         <div class="nav-logo">
+          <a href="index.html">
           <svg
             width="46"
             height="46"
@@ -72,12 +49,25 @@
               </clipPath>
             </defs>
           </svg>
+        </a>
         </div>
         <div class="categories lg:flex hidden items-center">
           <ul class="flex gap-6 text-xl font-light">
-            <li><a href="">Men</a></li>
-            <li><a href="">Women</a></li>
-            <li><a href="">Accessories</a></li>
+            <li
+              class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="">Men</a>
+            </li>
+            <li
+              class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="">Women</a>
+            </li>
+            <li
+              class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="">Accessories</a>
+            </li>
           </ul>
         </div>
         <div class="response-button flex items-center">
@@ -158,7 +148,7 @@
             class="inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#fafafa] hover:bg-[#f5f3f3]"
           >
             <svg
-              class="w-3 h-3 text-white dark:text-gray-800 rtl:rotate-180"
+              class="w-3 h-3 text-black rtl:rotate-180"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -184,7 +174,7 @@
             class="inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#fafafa] hover:bg-[#f5f3f3]"
           >
             <svg
-              class="w-3 h-3 text-white dark:text-gray-800 rtl:rotate-180"
+              class="w-3 h-3 text-black rtl:rotate-180"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -224,9 +214,11 @@
           </button>
         </div>
         <div
-          class="offer-slider w-10/12 lg:w-auto flex gap-6 overflow-x-scroll scroll-smooth snap-x snap-mandatory snap-center"
+          class="slider w-10/12 lg:w-auto flex gap-6 overflow-x-scroll scroll-smooth snap-x snap-mandatory snap-center"
         >
-          <div class="card flex flex-col snap-center">
+          <div
+            class="card flex flex-col snap-center items-center justify-center text-center"
+          >
             <a href="">
               <div class="offer-img w-52 lg:w-72">
                 <img src="img/shoe-1.jpg" alt="Women's Shoes ECHAPPE MS" />
@@ -234,7 +226,9 @@
               <p>WOMEN'S SHOES ECHAPPE MS</p>
             </a>
           </div>
-          <div class="card flex flex-col snap-center">
+          <div
+            class="card flex flex-col snap-center items-center justify-center text-center"
+          >
             <a href="">
               <div class="offer-img w-52 lg:w-72">
                 <img src="img/shoe-2.jpg" alt="Women's Shoes ECHAPPE MS" />
@@ -242,7 +236,9 @@
               <p>WOMEN'S SHOES ECHAPPE MS</p>
             </a>
           </div>
-          <div class="card flex flex-col snap-center">
+          <div
+            class="card flex flex-col snap-center items-center justify-center text-center"
+          >
             <a href="">
               <div class="offer-img w-52 lg:w-72">
                 <img src="img/shoe-3.jpg" alt="Women's Shoes ECHAPPE LACE" />
@@ -250,7 +246,9 @@
               <p>WOMEN'S SHOES ECHAPPE LACE</p>
             </a>
           </div>
-          <div class="card flex flex-col snap-center">
+          <div
+            class="card flex flex-col snap-center items-center justify-center text-center"
+          >
             <a href="">
               <div class="offer-img w-52 lg:w-72">
                 <img src="img/shoe-4.jpg" alt="Women's Shoes ECHAPPE LACE" />
@@ -258,7 +256,9 @@
               <p>WOMEN'S SHOES ECHAPPE LACE</p>
             </a>
           </div>
-          <div class="card flex flex-col snap-center">
+          <div
+            class="card flex flex-col snap-center items-center justify-center text-center"
+          >
             <a href="">
               <div class="offer-img w-52 lg:w-72">
                 <img src="img/shoe-5.jpg" alt="Women's Shoes ECHAPPE VC" />
@@ -269,7 +269,361 @@
         </div>
       </div>
     </section>
-    <div class="pb-[10000px]"></div>
+    <section class="tennis bg-black w-full">
+      <div
+        class="container mx-auto flex flex-col lg:flex-row-reverse items-center"
+      >
+        <div class="tennis-image lg:py-10 lg:px-3 lg:w-[1200px]">
+          <img src="img/tennis.jpg" alt="" />
+        </div>
+        <div
+          class="tennis-tittle flex flex-col items-center justify-center text-center gap-4 w-10/12 lg:w-auto lg:text-left lg:items-start text-white p-6 md:py-10"
+        >
+          <h1 class="text-4xl font-light">PROPLAYER TENNIS COLLECTION</h1>
+          <p class="font-normal">
+            The collection is engineered with advanced materials and features to
+            ensure comfort, flexibility, and durability during intense matches.
+          </p>
+          <button
+            class="bg-white text-black flex items-center gap-1 px-5 py-1 rounded-full text-xl hover:text-white hover:bg-black ring-1 ring-transparent hover:ring-white transition-all duration-150 ease-in-out"
+          >
+            SHOP NOW
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section
+      class="look text-center py-20 flex flex-col items-center justify-center"
+    >
+      <div class="look-tittle text-center pb-20">
+        <h1 class="font-medium text-7xl">
+          SHOP <br />
+          <span class="font-serif">THE LOOK</span>
+        </h1>
+      </div>
+      <div
+        class="container flex flex-col items-center justify-center lg:flex-row gap-20"
+      >
+        <div class="look-image">
+          <img src="img/shop.jpg" alt="" />
+        </div>
+
+        <div
+          id="indicators-carousel"
+          class="relative w-full md:w-[400px]"
+          data-carousel="static"
+        >
+          <!-- Carousel wrapper -->
+          <div class="relative h-96 overflow-hidden rounded-lg pb-10">
+            <!-- Item 1 -->
+            <div
+              class="hidden duration-700 ease-in-out"
+              data-carousel-item="active"
+            >
+              <img
+                src="img/shoe-6.jpg"
+                class="absolute block w-80 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="img/shoe-7.jpg"
+                class="absolute block w-80 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="img/shoe-8.jpg"
+                class="absolute block w-80 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="img/shoe-9.jpg"
+                class="absolute block w-80 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- Slider indicators -->
+          <div
+            class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2"
+          >
+            <button
+              type="button"
+              class="w-[6px] h-[6px] rotate-45"
+              aria-current="true"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              class="w-[6px] h-[6px] rotate-45"
+              aria-current="false"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              class="w-[6px] h-[6px] rotate-45"
+              aria-current="false"
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              class="w-[6px] h-[6px] rotate-45"
+              aria-current="false"
+              aria-label="Slide 4"
+              data-carousel-slide-to="3"
+            ></button>
+          </div>
+          <!-- Slider controls -->
+          <button
+            type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev
+          >
+            <span
+              class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#dddddd]"
+            >
+              <svg
+                class="w-4 h-4 text-black rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 1 1 5l4 4"
+                />
+              </svg>
+              <span class="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next
+          >
+            <span
+              class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#dddddd]"
+            >
+              <svg
+                class="w-4 h-4 text-black rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <span class="sr-only">Next</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="collection bg-black">
+      <div class="collection-tittle container mx-auto p-4">
+        <h1 class="text-white font-extralight text-xl lg:text-2xl">
+          SHOP BY COLLECTION
+        </h1>
+      </div>
+      <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+        <a href="">
+          <div class="collection-card flex flex-col gap-2">
+            <img src="img/men.jpg" alt="" />
+            <p class="text-white font-light">MEN</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="collection-card flex flex-col gap-2">
+            <img src="img/women.jpg" alt="" />
+            <p class="text-white font-light">WOMEN</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="collection-card flex flex-col gap-2">
+            <img src="img/shoe-8.jpg" alt="" />
+            <p class="text-white font-light">SHOES</p>
+          </div>
+        </a>
+        <a href="">
+          <div class="collection-card flex flex-col gap-2">
+            <img src="img/accessories.jpg" alt="" />
+            <p class="text-white font-light">ACCESSORIES</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="instagram h-80">
+      <div class="container mx-auto flex justify-center items-center h-52">
+        <a href="">
+          <div
+            class="flow-ig flex items-center justify-center font-bold text-3xl"
+          >
+            <i class="ph ph-instagram-logo"></i>
+            <span class="mx-1"></span>
+            <h1>Instagram</h1>
+          </div>
+          <p class="font-bold text-center">Follow Us @filaindonesia</p>
+        </a>
+      </div>
+    </section>
+    <footer class="bg-[#f7f6f6] pt-10">
+      <div class="container mx-auto flex flex-col p-4 md:p-0">
+        <div class="categories-list">
+          <ul class="flex gap-4">
+            <li
+              class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="" class="text-xl font-light">Men</a>
+            </li>
+            <li
+              class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="" class="text-xl font-light">Women</a>
+            </li>
+            <li
+              class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="" class="text-xl font-light">Accessories</a>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <hr class="border border-black" />
+        <br />
+        <div
+          class="footer-drop flex flex-col md:flex-row justify-between gap-4 w-full"
+        >
+          <ul class="overflow-hidden relative">
+            <input
+              type="checkbox"
+              class="absolute w-full opacity-0 peer md:hidden cursor-pointer"
+            />
+            <div
+              class="dropdown h-8 peer-checked:h-32 flex flex-col gap-3 border-b border-black md:border-0 transition-all ease-in-out duration-150"
+            >
+              <div class="show-dropdown flex justify-between md:hidden">
+                <li class="text-sm">Policies</li>
+                <i class="ph-bold ph-caret-down pr-4"></i>
+              </div>
+              <li class="text-sm font-bold hidden md:block">Policies</li>
+              <li class="text-sm cursor-pointer">Term & Conditions</li>
+              <li class="text-sm cursor-pointer">Privacy Policy</li>
+              <li class="text-sm cursor-pointer">Return Policy</li>
+            </div>
+          </ul>
+          <ul class="overflow-hidden relative">
+            <input
+              type="checkbox"
+              class="absolute w-full opacity-0 peer md:hidden cursor-pointer"
+            />
+            <div
+              class="dropdown h-8 peer-checked:h-[68px] flex flex-col gap-3 border-b border-black md:border-0 transition-all ease-in-out duration-150"
+            >
+              <div class="show-dropdown flex justify-between md:hidden">
+                <li class="text-sm">Resources</li>
+                <i class="ph-bold ph-caret-down pr-4"></i>
+              </div>
+              <li class="text-sm font-bold hidden md:block">Resources</li>
+              <li class="text-sm cursor-pointer">My Fila</li>
+            </div>
+          </ul>
+
+          <ul class="overflow-hidden relative">
+            <input
+              type="checkbox"
+              class="absolute w-full opacity-0 peer md:hidden cursor-pointer"
+            />
+            <div
+              class="dropdown h-8 peer-checked:h-24 flex flex-col gap-3 border-b border-black md:border-0 transition-all ease-in-out duration-150"
+            >
+              <div class="show-dropdown flex justify-between md:hidden">
+                <li class="text-sm">Contact</li>
+                <i class="ph-bold ph-caret-down pr-4"></i>
+              </div>
+              <li class="text-sm font-bold hidden md:block">Contact</li>
+              <li class="text-sm cursor-pointer">Customer Care</li>
+              <li class="text-sm cursor-pointer">About Us</li>
+            </div>
+          </ul>
+          <div class="connect w-96 flex flex-col gap-3 -order-2 md:order-1">
+            <ul>
+              <li>
+                <a href="" class="text-sm cursor-pointer font-bold"
+                  >Join Fila</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  >Sign up for exclusive offers, first looks at collaborations,
+                  and all things FILA.</a
+                >
+              </li>
+            </ul>
+            <button
+              class="w-full bg-[#000000] hover:bg-[#2e2e2e] py-3 rounded-full flex justify-center transition-all ease-in-out"
+            >
+              <a
+                href=""
+                class="flex items-center gap-2 text-white font-bold text-lg"
+                ><i class="ph ph-envelope"></i> Sign Up To Join Fila</a
+              >
+            </button>
+            <p class="text-sm font-bold">Connect With Us</p>
+            <ul class="flex gap-1">
+              <li>
+                <a href=""><i class="ph ph-x-logo text-2xl text-black"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="ph ph-instagram-logo text-2xl"></i></a>
+              </li>
+              <li>
+                <a href=""> <i class="ph ph-facebook-logo text-2xl"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <br />
+        <hr class="border border-black hidden md:block" />
+        <br />
+        <br />
+        <div
+          class="footer-logo flex items-center justify-center md:justify-start gap-6"
+        >
+          <img
+            src="img/fila.svg"
+            alt="..."
+            class="w-20 hidden md:inline-block"
+          />
+          <p class="text-[11px] text-[#9e9e9e] font-semibold">
+            © 2024 Jiva Dharma Andika, All Rights Reserved
+          </p>
+        </div>
+        <br />
+      </div>
+    </footer>
     <!-- JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <script src="script.js"></script>
