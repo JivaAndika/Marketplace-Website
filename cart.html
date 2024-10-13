@@ -166,252 +166,57 @@
       </div>
     </aside>
     <!--  -->
-    <section class="hero pt-16 lg:pt-20">
+    <section class="checkout pt-36 lg:pt-48">
       <div
-        id="controls-carousel"
-        class="relative w-full"
-        data-carousel="static"
+        class="container mx-auto flex flex-col items-center md:flex-row lg:px-16 gap-6"
       >
-        <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden md:h-96 lg:h-[700px]">
-          <!-- Item 1 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="img/hero-1.jpg"
-              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-          <!-- Item 2 -->
-          <div
-            class="hidden duration-700 ease-in-out"
-            data-carousel-item="active"
-          >
-            <img
-              src="img/hero-2.jpg"
-              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-          <!-- Item 3 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="img/hero-3.jpg"
-              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-        </div>
-        <!-- Slider controls -->
-        <button
-          type="button"
-          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-prev
-        >
-          <span
-            class="inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#fafafa] hover:bg-[#f5f3f3]"
-          >
-            <svg
-              class="w-3 h-3 text-black rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-            <span class="sr-only">Previous</span>
-          </span>
-        </button>
-        <button
-          type="button"
-          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-next
-        >
-          <span
-            class="inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#fafafa] hover:bg-[#f5f3f3]"
-          >
-            <svg
-              class="w-3 h-3 text-black rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-            <span class="sr-only">Next</span>
-          </span>
-        </button>
-      </div>
-    </section>
-    <section class="offer py-20">
-      <div
-        class="container mx-auto flex flex-col lg:flex-row justify-center items-center gap-8"
-      >
-        <div
-          class="offer-tittle flex flex-col items-center justify-center text-center gap-4 w-10/12 lg:w-auto lg:text-left lg:items-start"
-        >
-          <h1 class="text-4xl lg:text-5xl font-light">
-            STUNNING SUMMER with HAN SO-HEE
-          </h1>
-          <p class="font-semibold">
-            Experience the beauty of comfortable yet stylish FILA sportswear as
-            seen with Han So-hee.
-          </p>
-          <button
-            class="border-[2px] border-black flex items-center gap-1 px-5 py-1 rounded-full text-xl lg:text-2xl"
-          >
-            SHOP NOW <i class="ph ph-arrow-right"></i>
-          </button>
-        </div>
-        <div
-          class="slider w-10/12 lg:w-auto flex gap-6 overflow-x-scroll scroll-smooth snap-x snap-mandatory snap-center"
-        >
-          <div
-            class="card flex flex-col snap-center items-center justify-center text-center"
-          >
-            <a href="">
-              <div class="offer-img w-52 lg:w-72">
-                <img src="img/shoe-1.jpg" alt="Women's Shoes ECHAPPE MS" />
-              </div>
-              <p>WOMEN'S SHOES ECHAPPE MS</p>
-            </a>
-          </div>
-          <div
-            class="card flex flex-col snap-center items-center justify-center text-center"
-          >
-            <a href="">
-              <div class="offer-img w-52 lg:w-72">
-                <img src="img/shoe-2.jpg" alt="Women's Shoes ECHAPPE MS" />
-              </div>
-              <p>WOMEN'S SHOES ECHAPPE MS</p>
-            </a>
-          </div>
-          <div
-            class="card flex flex-col snap-center items-center justify-center text-center"
-          >
-            <a href="">
-              <div class="offer-img w-52 lg:w-72">
-                <img src="img/shoe-3.jpg" alt="Women's Shoes ECHAPPE LACE" />
-              </div>
-              <p>WOMEN'S SHOES ECHAPPE LACE</p>
-            </a>
-          </div>
-          <div
-            class="card flex flex-col snap-center items-center justify-center text-center"
-          >
-            <a href="">
-              <div class="offer-img w-52 lg:w-72">
-                <img src="img/shoe-4.jpg" alt="Women's Shoes ECHAPPE LACE" />
-              </div>
-              <p>WOMEN'S SHOES ECHAPPE LACE</p>
-            </a>
-          </div>
-          <div
-            class="card flex flex-col snap-center items-center justify-center text-center"
-          >
-            <a href="">
-              <div class="offer-img w-52 lg:w-72">
-                <img src="img/shoe-5.jpg" alt="Women's Shoes ECHAPPE VC" />
-              </div>
-              <p>WOMEN'S SHOES ECHAPPE VC</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="tennis bg-black w-full">
-      <div
-        class="container mx-auto flex flex-col lg:flex-row-reverse items-center"
-      >
-        <div class="tennis-image lg:py-10 lg:px-3 lg:w-[1200px]">
-          <img src="img/tennis.jpg" alt="" />
-        </div>
-        <div
-          class="tennis-tittle flex flex-col items-center justify-center text-center gap-4 w-10/12 lg:w-auto lg:text-left lg:items-start text-white p-6 md:py-10"
-        >
-          <h1 class="text-4xl font-light">PROPLAYER TENNIS COLLECTION</h1>
-          <p class="font-normal">
-            The collection is engineered with advanced materials and features to
-            ensure comfort, flexibility, and durability during intense matches.
-          </p>
-          <button
-            class="bg-white text-black flex items-center gap-1 px-5 py-1 rounded-full text-xl hover:text-white hover:bg-black ring-1 ring-transparent hover:ring-white transition-all duration-150 ease-in-out"
-          >
-            SHOP NOW
-            <i class="ph ph-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-    <section
-      class="look text-center py-20 flex flex-col items-center justify-center"
-    >
-      <div class="look-tittle text-center pb-20">
-        <h1 class="font-medium text-7xl">
-          STEAL <br />
-          <span class="font-serif">THE LOOK</span>
-        </h1>
-      </div>
-      <div
-        class="container flex flex-col items-center justify-center lg:flex-row gap-10 p-6"
-      >
-        <div class="look-image">
-          <img src="img/shop.jpg" alt="" />
-        </div>
-
         <div
           id="indicators-carousel"
-          class="relative w-full md:w-[400px] snap-center pr-4"
+          class="relative w-full md:w-[400px] lg:w-[500px]"
           data-carousel="static"
         >
           <!-- Carousel wrapper -->
-          <div class="relative h-96 overflow-hidden rounded-lg pb-10">
+          <div class="relative h-96 overflow-hidden rounded-lg md:h-96">
             <!-- Item 1 -->
             <div
               class="hidden duration-700 ease-in-out"
               data-carousel-item="active"
             >
               <img
-                src="img/shoe-6.jpg"
-                class="absolute block w-80 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                src="img/product_1.jpg"
+                class="absolute block w-64 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 alt="..."
               />
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
               <img
-                src="img/shoe-7.jpg"
-                class="absolute block w-80 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                src="img/accessories_3.jpg"
+                class="absolute block w-64 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 alt="..."
               />
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
               <img
-                src="img/shoe-8.jpg"
-                class="absolute block w-80 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                src="img/product_2.jpg"
+                class="absolute block w-64 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 alt="..."
               />
             </div>
             <!-- Item 4 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
               <img
-                src="img/shoe-9.jpg"
-                class="absolute block w-80 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                src="img/product_3.jpg"
+                class="absolute block w-64 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="img/product_4.jpg"
+                class="absolute block w-64 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 alt="..."
               />
             </div>
@@ -422,31 +227,38 @@
           >
             <button
               type="button"
-              class="w-[6px] h-[6px] rotate-45"
+              class="w-2 h-2 rounded-full"
               aria-current="true"
               aria-label="Slide 1"
               data-carousel-slide-to="0"
             ></button>
             <button
               type="button"
-              class="w-[6px] h-[6px] rotate-45"
+              class="w-2 h-2 rounded-full"
               aria-current="false"
               aria-label="Slide 2"
               data-carousel-slide-to="1"
             ></button>
             <button
               type="button"
-              class="w-[6px] h-[6px] rotate-45"
+              class="w-2 h-2 rounded-full"
               aria-current="false"
               aria-label="Slide 3"
               data-carousel-slide-to="2"
             ></button>
             <button
               type="button"
-              class="w-[6px] h-[6px] rotate-45"
+              class="w-2 h-2 rounded-full"
               aria-current="false"
               aria-label="Slide 4"
               data-carousel-slide-to="3"
+            ></button>
+            <button
+              type="button"
+              class="w-2 h-2 rounded-full"
+              aria-current="false"
+              aria-label="Slide 5"
+              data-carousel-slide-to="4"
             ></button>
           </div>
           <!-- Slider controls -->
@@ -503,56 +315,96 @@
             </span>
           </button>
         </div>
+        <div class="desc lg:w-[600px] flex flex-col p-8 lg:p-16 gap-4">
+          <div class="desc-tittle">
+            <h1 class="font-bold text-2xl lg:text-4xl">CrossBody Bag Aggro</h1>
+            <p class="text-lg">LifeStyle</p>
+          </div>
+          <hr class="border border-black" />
+          <div class="desc-pay">
+            <div class="price font-bold flex gap-2">
+              <p class="line-through">Rp 510.000</p>
+              <span class="text-red-500">Rp 239.500</span>
+            </div>
+            <p class="text-sm">
+              Or 3 Payments of Rp 79,833 with Atome , 0% interest.
+            </p>
+            <div class="colorProduct mt-2 flex flex-col gap-2">
+              <div class="textProduct flex gap-2 text-xs">
+                <p class="font-bold">Color</p>
+                <span>Grey</span>
+              </div>
+              <div
+                class="preview w-12 border border-red-500 rounded-md overflow-hidden"
+              >
+                <img src="img/accessories_3.jpg" class="p-1" alt="" />
+              </div>
+            </div>
+          </div>
+          <hr class="border-transparent" />
+          <div class="order flex font-bold gap-3">
+            <div class="content border w-[68px] border-black p-2">
+              <button>-</button>
+              <span class="mx-2">1</span>
+              <button>+</button>
+            </div>
+            <button class="px-10 md:px-16 bg-black rounded-full text-white">
+              Add to bag
+            </button>
+          </div>
+          <hr class="border border-black mt-3" />
+        </div>
+      </div>
+      <div class="descc flex justify-center items-center">
+        <div class="descProd w-9/12 p-4 lg:p-8 bg-[#ececec]">
+          <div class="tittle text-center mb-7 text-2xl">
+            <h1>Description</h1>
+          </div>
+          <p>
+            "FILA Argyro crossbody bag dengan desain minimalis detail logo Fila.
+            <br />
+            <br />
+            Detail:
+            <br />
+            - Warna abu-abu <br />
+            - Material polyester <br />
+            - Kompartemen utama dengan resleting <br />
+            - Kompartemen kedua dengan resleting didepan <br />
+            - 2 saku tambahan di dalam kompartemen utama <br />
+            - Quick pocket di bagian belakang <br />
+            - Adjustable slot strap <br />
+            - Produk unisex <br />
+            <br />
+            Size : Width x Height x Side wide <br />
+            19 cm x 32 cm x 3.5 cm <br />
+            <br />
+            [ MOHON PERHATIKAN DETAIL SIZE,TOLERANSI SIZE PLUS MINUS 1-2 CM ]
+            <br /><br />
+            KESALAHAN PEMILIHAN SIZE TIDAK DAPAT MENGAJUKAN PENUKARAN BARANG
+            <br /><br />
+            Langkah Pembelian : <br />
+            1. Pastikan size yang akan di beli sesuai dengan ukuran anda.<br />
+            2. Tanyakan size dan warna sebelum melakukan pembelian.<br />
+            3. Pilih ukuran dan masukan size yang sudah sesuai ke dalam
+            keranjang belanja (checkout) <br />
+            4. Lakukan Pembayaran sesuai dengan metode pilihan pembayaran.
+            <br />
+            5. Sertakan video unboxing untuk pengajuan complain jika barang
+            problem saat diterima, pengajuan tidak diterima jika tidak ada
+            video.
+            <br />
+            6. Produk yang sudah di pesan tidak bisa pengajuan complain
+            penukaran size <br />
+            7. Pengajuan pembatalan karena ada alasan apapun wajib konfirmasi
+            lewat fitur chat marketplace. Jika tidak ada konfirmasi lewat chat,
+            pengajuan pembatalan akan kami tolak dan barang akan tetap kami
+            kirim." <br /><br />
+            Product: ADXIU152M052000
+          </p>
+        </div>
       </div>
     </section>
-    <section class="collection bg-black">
-      <div class="collection-tittle container mx-auto p-4">
-        <h1 class="text-white font-extralight text-xl lg:text-2xl">
-          SHOP BY COLLECTION
-        </h1>
-      </div>
-      <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
-        <a href="">
-          <div class="collection-card flex flex-col gap-2">
-            <img src="img/men.jpg" alt="" />
-            <p class="text-white font-light">MEN</p>
-          </div>
-        </a>
-        <a href="">
-          <div class="collection-card flex flex-col gap-2">
-            <img src="img/women.jpg" alt="" />
-            <p class="text-white font-light">WOMEN</p>
-          </div>
-        </a>
-        <a href="">
-          <div class="collection-card flex flex-col gap-2">
-            <img src="img/shoe-8.jpg" alt="" />
-            <p class="text-white font-light">SHOES</p>
-          </div>
-        </a>
-        <a href="">
-          <div class="collection-card flex flex-col gap-2">
-            <img src="img/accessories.jpg" alt="" />
-            <p class="text-white font-light">Accessories</p>
-          </div>
-        </a>
-      </div>
-    </section>
-    <section class="instagram h-80">
-      <div class="container mx-auto flex justify-center items-center h-52">
-        <a href="https://www.instagram.com/FILAIndonesia">
-          <div
-            class="flow-ig flex items-center justify-center font-bold text-3xl"
-          >
-            <i class="ph ph-instagram-logo"></i>
-            <span class="mx-1"></span>
-            <h1>Instagram</h1>
-          </div>
-          <p class="font-bold text-center">Follow Us @filaindonesia</p>
-        </a>
-      </div>
-    </section>
-    <footer class="bg-[#f7f6f6] pt-10">
+    <footer class="bg-[#f7f6f6] mt-28 pt-10">
       <div class="container mx-auto flex flex-col p-4">
         <div class="categories-list">
           <ul class="flex gap-4">
@@ -696,7 +548,7 @@
             alt="..."
             class="w-20 hidden md:inline-block"
           />
-          <p class="text-[11px] text-[#9e9e9e] font-semibold ">
+          <p class="text-[11px] text-[#9e9e9e] font-semibold">
             © 2024 Jiva Dharma Andika, All Rights Reserved
           </p>
         </div>

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarketPlace</title>
+    <!-- TAILWINDCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PHOSPHOR ICON -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- WEBSITE ICON -->
+    <link rel="icon" href="img/fila.svg" />
+  </head>
+  <style>
+    .slider {
+      scrollbar-width: none;
+    }
+    .active {
+      border-color: rgb(77, 166, 240) !important;
+    }
+  </style>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="w-full shadow-lg fixed bg-white z-50">
+      <div class="container mx-auto justify-between flex p-4 lg:py-6">
+        <div class="nav-logo">
+          <a href="index.html">
+            <svg
+              width="46"
+              height="46"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                clip-path="url(#kk35srubca)"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="#19191A"
+              >
+                <path d="M0 46h46V0H0v46zm2.11-2.12h41.78V2.12H2.11v41.76z" />
+                <path
+                  d="M35.239 5.935H10.76c-2.68 0-4.853 2.183-4.853 4.876 0 2.693 2.173 4.876 4.853 4.876H35.24c2.68 0 4.853-2.183 4.853-4.876 0-2.693-2.173-4.876-4.853-4.876zM32.706 18.442H10.761c-2.68 0-4.853 2.183-4.853 4.876v12.93c0 2.693 2.173 4.876 4.853 4.876 2.68 0 4.854-2.183 4.854-4.875v-6.996c0-.585.472-1.06 1.055-1.06h16.036c2.68 0 4.854-2.183 4.854-4.875 0-2.693-2.174-4.876-4.854-4.876z"
+                />
+              </g>
+              <defs>
+                <clipPath id="kk35srubca">
+                  <path fill="#fff" d="M0 0h46v46H0z" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="categories lg:flex hidden items-center">
+          <ul class="flex gap-6 text-xl font-light">
+            <li
+              class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="index.html">Home</a>
+            </li>
+            <li
+              class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="shop.html">Shop</a>
+            </li>
+            <li
+              class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="support.html">Support Center</a>
+            </li>
+          </ul>
+        </div>
+        <div class="response-button flex items-center">
+          <ul class="flex gap-3 text-2xl">
+            <li onclick="openSearch()" id="search-button">
+              <i class="ph-light ph-magnifying-glass cursor-pointer"></i>
+            </li>
+            <li>
+              <a href=""><i class="ph-light ph-shopping-cart-simple"></i> </a>
+            </li>
+            <li onclick="openNavbar() " class="cursor-pointer">
+              <i class="ph ph-list lg:hidden"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="search-input w-full bg-white border-b -translate-y-full opacity-0 transition-all ease-in-out duration-250 fixed z-50"
+    >
+      <div
+        class="container search-bar mx-auto flex justify-center items-center py-3 gap-3"
+      >
+        <input
+          type="search"
+          class="lg:w-full w-3/4 font-bold border rounded-sm p-3"
+          placeholder="Search"
+        />
+        <i
+          class="ph-bold ph-x close-search text-2xl cursor-pointer"
+          onclick="closeSearch()"
+        ></i>
+      </div>
+    </div>
+    <aside
+      class="w-full mr-auto h-screen backdrop-blur bg-[#0000009f] bg-opacity-80 fixed transition-all ease-in-out duration-200 flex lg:hidden -translate-x-full z-50"
+    >
+      <div class="w-72 h-full bg-white content flex px-10">
+        <button class="absolute flex gap-6 items-center top-3 left-[52px]">
+          <a href="index.html">
+            <svg
+              width="46"
+              height="46"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                clip-path="url(#kk35srubca)"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="#19191A"
+              >
+                <path d="M0 46h46V0H0v46zm2.11-2.12h41.78V2.12H2.11v41.76z" />
+                <path
+                  d="M35.239 5.935H10.76c-2.68 0-4.853 2.183-4.853 4.876 0 2.693 2.173 4.876 4.853 4.876H35.24c2.68 0 4.853-2.183 4.853-4.876 0-2.693-2.173-4.876-4.853-4.876zM32.706 18.442H10.761c-2.68 0-4.853 2.183-4.853 4.876v12.93c0 2.693 2.173 4.876 4.853 4.876 2.68 0 4.854-2.183 4.854-4.875v-6.996c0-.585.472-1.06 1.055-1.06h16.036c2.68 0 4.854-2.183 4.854-4.875 0-2.693-2.174-4.876-4.854-4.876z"
+                />
+              </g>
+              <defs>
+                <clipPath id="kk35srubca">
+                  <path fill="#fff" d="M0 0h46v46H0z" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            viewBox="0 0 256 256"
+            onclick="closeNavbar()"
+          >
+            <path
+              d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+            ></path>
+          </svg>
+        </button>
+        <ul class="flex flex-col gap-5 pt-20">
+          <li
+            class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+          >
+            <a href="index.html">Home</a>
+          </li>
+          <li
+            class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+          >
+            <a href="shop.html">Shop</a>
+          </li>
+          <li
+            class="relative px-3 pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+          >
+            <a href="support.html">Support Center</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!--  -->
+    <aside
+      id="filter_bar"
+      class="filter translate-y-full transition-all duration-500 ease-in-out fixed z-[999] w-full h-screen bg-[#000000b0] pt-12"
+    >
+      <div
+        class="container w-full absolute bottom-0 bg-white flex flex-col gap-3 p-4"
+      >
+        <div class="tittle-filter flex justify-between">
+          <div
+            id="clear"
+            class="clear-button cursor-pointer flex items-center gap-2"
+          >
+            Clear<i class="ph ph-arrow-u-up-left"></i>
+          </div>
+          <div class="closeFilter cursor-pointer" onclick="closeFilter()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-8 h-8"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <hr class="border border-black" />
+        <div id="color" class="button_select flex flex-col gap-3">
+          <h3 class="text-sm font-bold">Color</h3>
+          <div class="button_wrapper flex flex-wrap gap-[20px] w-72">
+            <button
+              class="button_picker rounded-full box-content bg-[#ff0000] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            ></button>
+            <button
+              class="button_picker rounded-full box-content bg-[#91ff00] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            ></button>
+            <button
+              class="button_picker rounded-full box-content bg-[#ffffff] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            ></button>
+            <button
+              class="button_picker rounded-full box-content bg-[#ff00ea] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            ></button>
+            <button
+              class="button_picker rounded-full box-content bg-[#ff8800] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            ></button>
+            <button
+              class="button_picker rounded-full box-content bg-[#0051ff] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            ></button>
+            <button
+              class="button_picker rounded-full box-content bg-[#ff008c] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            ></button>
+          </div>
+        </div>
+        <hr class="border[0.5px] border-black" />
+        <div id="size" class="button_select flex flex-col gap-3">
+          <h3 class="text-sm font-bold">Size</h3>
+          <div class="size_wrapper flex flex-wrap gap-[20px] w-72">
+            <button
+              class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            >
+              <p class="font-semibold text-sm">XXS</p>
+            </button>
+            <button
+              class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            >
+              <p class="font-semibold text-sm">XS</p>
+            </button>
+            <button
+              class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            >
+              <p class="font-semibold text-sm">S</p>
+            </button>
+            <button
+              class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            >
+              <p class="font-semibold text-sm">M</p>
+            </button>
+            <button
+              class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            >
+              <p class="font-semibold text-sm">L</p>
+            </button>
+            <button
+              class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+            >
+              <p class="font-semibold text-sm">XL</p>
+            </button>
+          </div>
+        </div>
+        <hr class="border[0.5px] border-black" />
+        <div class="price_select flex flex-col">
+          <h3 class="text-sm font-bold">Price</h3>
+          <div class="price_wrapper">
+            <div class="price_picker pl-2">
+              <input
+                type="checkbox"
+                name="check"
+                class="custom-radio border-slate-500"
+              />
+              <label for="check" class="text-xs font-extralight"
+                >100.000 - 299.999</label
+              >
+            </div>
+            <div class="price_picker pl-2">
+              <input
+                type="checkbox"
+                name="check"
+                class="custom-radio border-slate-500"
+              />
+              <label for="check" class="text-xs font-extralight"
+                >300.000 - 499.999</label
+              >
+            </div>
+            <div class="price_picker pl-2">
+              <input
+                type="checkbox"
+                name="check"
+                class="custom-radio border-slate-500"
+              />
+              <label for="check" class="text-xs font-extralight"
+                >500.000 - 899.999</label
+              >
+            </div>
+            <div class="price_picker pl-2">
+              <input
+                type="checkbox"
+                name="check"
+                class="custom-radio border-slate-500"
+              />
+              <label for="check" class="text-xs font-extralight"
+                >900.000 - 1.100.000</label
+              >
+            </div>
+          </div>
+        </div>
+        <hr class="border border-black" />
+      </div>
+    </aside>
+
+    <section class="shop pt-36 lg:pt-48">
+      <div class="tittle-shop pb-8 flex justify-center">
+        <h1 class="text-3xl md:text-4xl font-semibold">Product</h1>
+      </div>
+      <div class="container mx-auto flex flex-col lg:flex-row">
+        .
+        <div
+          class="filter-tittle p-4 mt-4 flex justify-between font-bold text-lg lg:hidden"
+        >
+          <h1>Filter</h1>
+          <i
+            onclick="openFilter()"
+            class="ph-bold ph-funnel cursor-pointer"
+          ></i>
+        </div>
+        <div class="filter lg:pt-12">
+          <div
+            class="container w-full bg-white hidden lg:flex flex-col gap-3 p-4"
+          >
+            <div class="tittle-filter flex justify-between">
+              <h2 class="font-bold text-xl">Filter</h2>
+              <div
+                id="clear"
+                class="clear-button cursor-pointer flex items-center gap-2"
+              >
+                Clear<i class="ph ph-arrow-u-up-left"></i>
+              </div>
+            </div>
+            <hr class="border border-black" />
+            <div class="product-filter flex flex-col gap-1">
+              <h3 class="text-sm font-bold">Product</h3>
+              <p class="text-sm pl-2">New & Featured</p>
+              <p class="text-sm pl-2">Flash Sale</p>
+            </div>
+            <hr class="border[0.5px] border-black" />
+            <div id="color" class="button_select flex flex-col gap-3">
+              <h3 class="text-sm font-bold">Color</h3>
+              <div class="button_wrapper flex flex-wrap gap-[20px] w-72">
+                <button
+                  class="button_picker rounded-full box-content bg-[#ff0000] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                ></button>
+                <button
+                  class="button_picker rounded-full box-content bg-[#91ff00] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                ></button>
+                <button
+                  class="button_picker rounded-full box-content bg-[#ffffff] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                ></button>
+                <button
+                  class="button_picker rounded-full box-content bg-[#ff00ea] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                ></button>
+                <button
+                  class="button_picker rounded-full box-content bg-[#ff8800] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                ></button>
+                <button
+                  class="button_picker rounded-full box-content bg-[#0051ff] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                ></button>
+                <button
+                  class="button_picker rounded-full box-content bg-[#ff008c] w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                ></button>
+              </div>
+            </div>
+            <hr class="border[0.5px] border-black" />
+            <div id="size" class="button_select flex flex-col gap-3">
+              <h3 class="text-sm font-bold">Size</h3>
+              <div class="size_wrapper flex flex-wrap gap-[20px] w-72">
+                <button
+                  class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                >
+                  <p class="font-semibold text-sm">XXS</p>
+                </button>
+                <button
+                  class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                >
+                  <p class="font-semibold text-sm">XS</p>
+                </button>
+                <button
+                  class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                >
+                  <p class="font-semibold text-sm">S</p>
+                </button>
+                <button
+                  class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                >
+                  <p class="font-semibold text-sm">M</p>
+                </button>
+                <button
+                  class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                >
+                  <p class="font-semibold text-sm">L</p>
+                </button>
+                <button
+                  class="button_picker rounded-full box-content w-8 h-8 overflow-hidden border-[3px] border-[#dadada]"
+                >
+                  <p class="font-semibold text-sm">XL</p>
+                </button>
+              </div>
+            </div>
+            <hr class="border[0.5px] border-black" />
+            <div class="price_select flex flex-col">
+              <h3 class="text-sm font-bold">Price</h3>
+              <div class="price_wrapper">
+                <div class="price_picker pl-2">
+                  <input
+                    type="checkbox"
+                    name="check"
+                    class="custom-radio border-slate-500"
+                  />
+                  <label for="check" class="text-xs font-extralight"
+                    >100.000 - 299.999</label
+                  >
+                </div>
+                <div class="price_picker pl-2">
+                  <input
+                    type="checkbox"
+                    name="check"
+                    class="custom-radio border-slate-500"
+                  />
+                  <label for="check" class="text-xs font-extralight"
+                    >300.000 - 499.999</label
+                  >
+                </div>
+                <div class="price_picker pl-2">
+                  <input
+                    type="checkbox"
+                    name="check"
+                    class="custom-radio border-slate-500"
+                  />
+                  <label for="check" class="text-xs font-extralight"
+                    >500.000 - 899.999</label
+                  >
+                </div>
+                <div class="price_picker pl-2">
+                  <input
+                    type="checkbox"
+                    name="check"
+                    class="custom-radio border-slate-500"
+                  />
+                  <label for="check" class="text-xs font-extralight"
+                    >900.000 - 1.100.000</label
+                  >
+                </div>
+              </div>
+            </div>
+            <hr class="border border-black" />
+          </div>
+        </div>
+        <div class="product lg:pt-12 pb-20">
+          <div
+            class="container mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 p-4"
+          >
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/mLpant_1.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">Men's Long Pants</p>
+                    <p class="text-xs my-1">Performance</p>
+                    <p class="text-xs">Black</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p class="line-through">Rp 1.100.000</p>
+                    <p class="text-red-500">Rp 899.500</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/mpant_2.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">Men's Short Pants</p>
+                    <p class="text-xs my-1">Tennis's Performance</p>
+                    <p class="text-xs">White</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p>Rp 799.000</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/mpant_1.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">Men's Short Pants</p>
+                    <p class="text-xs my-1">Tennis's Performance</p>
+                    <p class="text-xs">Blue</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p class="line-through">Rp 799.000</p>
+                    <p class="text-red-500">Rp 569.000</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/mpant_3.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">Men's Short Pants</p>
+                    <p class="text-xs my-1">Tennis's Performance</p>
+                    <p class="text-xs">Navy</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p>Rp 799.000</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/mpant_4.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">Men's Short Pants</p>
+                    <p class="text-xs my-1">Tennis's Performance</p>
+                    <p class="text-xs">Black</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p>Rp 799.000</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/wLpant_1.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">Women's Long Pants</p>
+                    <p class="text-xs my-1">LifeStyle</p>
+                    <p class="text-xs">Green</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p class="line-through">Rp 1.299.000</p>
+                    <p class="text-red-500">Rp 890.000</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/wLpant_2.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">Women's Long Pants</p>
+                    <p class="text-xs my-1">Performance</p>
+                    <p class="text-xs">Black</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p>Rp 1.199.000</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/wLpant_3.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">Women's Long Pants</p>
+                    <p class="text-xs my-1">LifeStyle</p>
+                    <p class="text-xs">Navy</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p>Rp 1.199.000</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/accessories_1.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">Caps All Size</p>
+                    <p class="text-xs my-1">LifeStyle</p>
+                    <p class="text-xs">Black</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p class="line-through">Rp 430.000</p>
+                    <p class="text-red-500">Rp 219.500</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/accessories_2.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">Waist Bag Thelio</p>
+                    <p class="text-xs my-1">LifeStyle</p>
+                    <p class="text-xs">Black</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p>Rp 380.000</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="cart.html">
+              <div class="card-product flex flex-col cursor-pointer">
+                <img src="img/accessories_3.jpg" alt="" />
+                <div class="cProduct-tittle mt-2 flex flex-col gap-2">
+                  <div class="product_categorie">
+                    <p class="font-bold text-sm">CrossBody Bag Argyro</p>
+                    <p class="text-xs my-1">LifeStyle</p>
+                    <p class="text-xs">Grey</p>
+                  </div>
+                  <div
+                    class="price-product flex flex-wrap gap-1 font-bold text-xs"
+                  >
+                    <p>Rp 510.000</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-[#f7f6f6] pt-10">
+      <div class="container mx-auto flex flex-col p-4">
+        <div class="categories-list">
+          <ul class="flex gap-4">
+            <li
+              class="relative pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="index.html" class="text-lg font-light">Home</a>
+            </li>
+            <li
+              class="relative pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="shop.html" class="text-lg font-light">Shop</a>
+            </li>
+            <li
+              class="relative pb-2 before:absolute before:inset-x-0 before:bottom-0 before:h-[2px] before:origin-right before:scale-x-0 before:bg-black before:transition before:duration-300 hover:before:origin-left hover:before:scale-x-100"
+            >
+              <a href="support.html" class="text-lg font-light"
+                >Support Center</a
+              >
+            </li>
+          </ul>
+        </div>
+        <br />
+        <hr class="border border-black" />
+        <br />
+        <div
+          class="footer-drop flex flex-col md:flex-row justify-between gap-4 w-full"
+        >
+          <ul class="overflow-hidden relative">
+            <input
+              type="checkbox"
+              class="absolute w-full opacity-0 peer md:hidden cursor-pointer h-7"
+            />
+            <div
+              class="dropdown h-8 peer-checked:h-32 flex flex-col gap-3 border-b border-black md:border-0 transition-all ease-in-out duration-150"
+            >
+              <div class="show-dropdown flex justify-between md:hidden">
+                <li class="text-sm">Policies</li>
+                <i class="ph-bold ph-caret-down pr-4"></i>
+              </div>
+              <li class="text-sm font-bold hidden md:block">Policies</li>
+              <li class="text-sm cursor-pointer">Term & Conditions</li>
+              <li class="text-sm cursor-pointer">Privacy Policy</li>
+              <li class="text-sm cursor-pointer">Return Policy</li>
+            </div>
+          </ul>
+          <ul class="overflow-hidden relative">
+            <input
+              type="checkbox"
+              class="absolute w-full opacity-0 peer md:hidden cursor-pointer h-7"
+            />
+            <div
+              class="dropdown h-8 peer-checked:h-[68px] flex flex-col gap-3 border-b border-black md:border-0 transition-all ease-in-out duration-150"
+            >
+              <div class="show-dropdown flex justify-between md:hidden">
+                <li class="text-sm">Resources</li>
+                <i class="ph-bold ph-caret-down pr-4"></i>
+              </div>
+              <li class="text-sm font-bold hidden md:block">Resources</li>
+              <li class="text-sm cursor-pointer">My Fila</li>
+            </div>
+          </ul>
+
+          <ul class="overflow-hidden relative">
+            <input
+              type="checkbox"
+              class="absolute w-full opacity-0 peer md:hidden cursor-pointer h-7"
+            />
+            <div
+              class="dropdown h-8 peer-checked:h-24 flex flex-col gap-3 border-b border-black md:border-0 transition-all ease-in-out duration-150"
+            >
+              <div class="show-dropdown flex justify-between md:hidden">
+                <li class="text-sm">Contact</li>
+                <i class="ph-bold ph-caret-down pr-4"></i>
+              </div>
+              <li class="text-sm font-bold hidden md:block">Contact</li>
+              <li class="text-sm cursor-pointer">Customer Care</li>
+              <li class="text-sm cursor-pointer">About Us</li>
+            </div>
+          </ul>
+          <div class="connect flex flex-col gap-3 -order-2 md:order-1">
+            <ul>
+              <li>
+                <a href="" class="text-sm cursor-pointer font-bold"
+                  >Join Fila</a
+                >
+              </li>
+              <li>
+                <a href=""
+                  >Sign up for exclusive offers, first looks at collaborations,
+                  and all things FILA.</a
+                >
+              </li>
+            </ul>
+            <div class="sign_up-footer">
+              <button
+                class="bg-[#000000] w-full md:w-auto md:px-20 hover:bg-[#2e2e2e] py-3 rounded-full flex justify-center transition-all ease-in-out"
+              >
+                <a
+                  href=""
+                  class="flex items-center gap-2 text-white font-bold text-lg"
+                  ><i class="ph ph-envelope"></i> Sign Up To Join Fila</a
+                >
+              </button>
+            </div>
+            <p class="text-sm font-bold">Connect With Us</p>
+            <ul class="flex gap-1">
+              <li>
+                <a target="_blank" href="https://x.com/FILAIndonesia"
+                  ><i class="ph ph-x-logo text-2xl text-black"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/FILAIndonesia"
+                  ><i class="ph ph-instagram-logo text-2xl"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/FILAIndonesia"
+                >
+                  <i class="ph ph-facebook-logo text-2xl"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <br />
+        <hr class="border border-black hidden md:block" />
+        <br />
+        <br />
+        <div
+          class="footer-logo flex items-center justify-center md:justify-start gap-6"
+        >
+          <img
+            src="img/fila.svg"
+            alt="..."
+            class="w-20 hidden md:inline-block"
+          />
+          <p class="text-[11px] text-[#9e9e9e] font-semibold">
+            © 2024 Jiva Dharma Andika, All Rights Reserved
+          </p>
+        </div>
+        <br />
+      </div>
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
